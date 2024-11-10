@@ -1,0 +1,13 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+
+/** css variables **/
+:root {
+  /** colors **/
+  --primary-color: #00B9A6;
+  --secondary-color: #80B5D5;
+
+  --text-color: #D9D9D9;
+
+  --body-color: #1E1F20;
+}
