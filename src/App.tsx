@@ -8,9 +8,9 @@ import SurveyInfo from "./sections/SurveyInfo";
 export default function App() {
   return (
     <>
-      <main className="w-full h-full flex flex-col gap-32 items-center">
+      <main className="flex size-full flex-col items-center gap-32">
         <Start />
-        <div className="w-[clamp(66%,40rem,100%)] px-8">
+        <div className="flex w-[clamp(66%,40rem,100%)] flex-col gap-32 px-8">
           <MetaInfo />
           <Guide />
           <SurveyInfo />

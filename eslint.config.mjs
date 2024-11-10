@@ -4,11 +4,13 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
+import { fixupPluginRules } from "@eslint/compat";
 import eslint from "@eslint/js";
 // @ts-ignore
 import importPlugin from "eslint-plugin-import";
-import pluginPrettier from "eslint-plugin-prettier";
-import unusedImports from "eslint-plugin-unused-imports";
+import eslintPrettierPlugin from "eslint-plugin-prettier";
+import eslintPluginTailwindCSS from "eslint-plugin-tailwindcss";
+import unusedImportsPlugin from "eslint-plugin-unused-imports";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
@@ -25,8 +27,9 @@ export default tseslint.config(
       "dist",
       "node_modules",
       "eslint.config.mjs",
+      "postcss.config.js",
       "tailwind.config.js",
-      "vite.config*.{ts,js}",
+      "vite.config*.{ts,js,mjs}",
     ],
   },
 
@@ -52,9 +55,10 @@ export default tseslint.config(
       },
     },
     plugins: {
-      prettier: pluginPrettier,
-      import: importPlugin,
-      "unused-imports": unusedImports,
+      prettier: eslintPrettierPlugin,
+      tailwindcss: eslintPluginTailwindCSS,
+      import: fixupPluginRules(importPlugin),
+      "unused-imports": fixupPluginRules(unusedImportsPlugin),
     },
     rules: {
       ...eslint.configs.recommended.rules,
@@ -93,6 +97,14 @@ export default tseslint.config(
           endOfLine: "auto",
         },
       ],
+
+      "tailwindcss/classnames-order": "error",
+      "tailwindcss/no-custom-classname": "off",
+      "tailwindcss/enforces-shorthand": "error",
+      "tailwindcss/migration-from-tailwind-2": "error",
+      "tailwindcss/no-contradicting-classname": "error",
+      "tailwindcss/enforces-negative-arbitrary-values": "error",
+  
 
       "import/first": "error",
       "import/newline-after-import": "error",
