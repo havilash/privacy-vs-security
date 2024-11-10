@@ -1,5 +1,5 @@
 
-name: CI-CD
+name: Continuous Integration, Deployment
 on:
   push:
     branches:
