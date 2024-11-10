@@ -8,12 +8,14 @@ import SurveyInfo from "./sections/SurveyInfo";
 export default function App() {
   return (
     <>
-      <Start />
-      <MetaInfo />
-      <Guide />
-      <SurveyInfo />
-      <InteractiveSurvey />
-      <PersonalGuide />
+      <main>
+        <Start />
+        <MetaInfo />
+        <Guide />
+        <SurveyInfo />
+        <InteractiveSurvey />
+        <PersonalGuide />
+      </main>
     </>
   );
 }

@@ -1,5 +1,5 @@
 interface Props {}
 
 export default function Guide({}: Props) {
-  return <div>Guide</div>;
+  return <section>Guide</section>;
 }
