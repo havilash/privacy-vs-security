@@ -8,6 +8,7 @@
   /* Reset and Base Styles */
   * {
     @apply box-border p-0 m-0 scroll-smooth;
+    /* border: 1px solid black; */
   }
 
   html, body {

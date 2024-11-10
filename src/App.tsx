@@ -8,13 +8,15 @@ import SurveyInfo from "./sections/SurveyInfo";
 export default function App() {
   return (
     <>
-      <main>
+      <main className="w-full h-full flex flex-col gap-32 items-center">
         <Start />
-        <MetaInfo />
-        <Guide />
-        <SurveyInfo />
-        <InteractiveSurvey />
-        <PersonalGuide />
+        <div className="w-[clamp(66%,40rem,100%)] px-8">
+          <MetaInfo />
+          <Guide />
+          <SurveyInfo />
+          <InteractiveSurvey />
+          <PersonalGuide />
+        </div>
       </main>
     </>
   );
