@@ -25,6 +25,7 @@ export default tseslint.config(
       "dist",
       "node_modules",
       "eslint.config.mjs",
+      "tailwind.config.js",
     ],
   },
 
