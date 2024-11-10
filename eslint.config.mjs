@@ -4,11 +4,11 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
-import { fixupPluginRules } from "@eslint/compat";
 import eslint from "@eslint/js";
 // @ts-ignore
 import importPlugin from "eslint-plugin-import";
 import pluginPrettier from "eslint-plugin-prettier";
+import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
@@ -26,6 +26,7 @@ export default tseslint.config(
       "node_modules",
       "eslint.config.mjs",
       "tailwind.config.js",
+      "vite.config*.{ts,js}",
     ],
   },
 
@@ -52,7 +53,8 @@ export default tseslint.config(
     },
     plugins: {
       prettier: pluginPrettier,
-      import: fixupPluginRules(importPlugin),
+      import: importPlugin,
+      "unused-imports": unusedImports,
     },
     rules: {
       ...eslint.configs.recommended.rules,
@@ -108,7 +110,7 @@ export default tseslint.config(
               position: "after",
             },
             {
-              pattern: "theme/**",
+              pattern: "assets/**",
               group: "internal",
               position: "after",
             },
@@ -122,9 +124,16 @@ export default tseslint.config(
               group: "internal",
               position: "after",
             },
+            {
+              pattern: "theme/**",
+              group: "internal",
+              position: "after",
+            },
           ],
         },
       ],
+
+      "unused-imports/no-unused-imports": "error",
     },
   },
 );

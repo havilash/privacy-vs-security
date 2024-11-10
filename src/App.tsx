@@ -1,5 +1,3 @@
-import React from "react";
-
 import Guide from "./sections/Guide";
 import InteractiveSurvey from "./sections/InteractiveSurvey";
 import MetaInfo from "./sections/MetaInfo";
