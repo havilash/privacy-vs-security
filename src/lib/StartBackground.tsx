@@ -1,113 +1,82 @@
-export default function Start() {
+
+import { randomUUID } from "crypto";
+import React, { useRef, useEffect, useState } from "react";
+
+const StartBackground = () => {
+  // Constants for customization
+  const NUM_SQUARES = 100;
+  const SIZE_SCALE = 500; // Randomness factor for size
+  const SIZE_RANDOMNESS = 200; // Randomness factor for size
+  const MIN_COLOR_INTENSITY = 50; // Lightest color
+  const MAX_COLOR_INTENSITY = 80; // Darkest color
+  const COLOR_RANDOMNESS = 20; // Randomness factor for color
+
+  const containerRef = useRef(null);
+  const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
+
+  // Update container size
+  useEffect(() => {
+    if (containerRef.current) {
+      const { offsetWidth, offsetHeight } = containerRef.current;
+      setContainerSize({ width: offsetWidth, height: offsetHeight });
+    }
+  }, []);
+
+  const generateSquares = () => {
+    const squares = [];
+    const center = { x: containerSize.width / 2, y: containerSize.height / 2 };
+    const max_radius = Math.sqrt(center.x ** 2 + center.y ** 2)
+
+    for (let i = 0; i < NUM_SQUARES; i++) {
+      const angle = Math.random() * 2 * Math.PI;
+      const scale = i / NUM_SQUARES
+      const radius = scale * max_radius;
+
+      const randomX = Math.cos(angle) * radius + center.x;
+      const randomY = Math.sin(angle) * radius + center.y;
+
+      console.log(center, max_radius, angle, radius, randomX, randomY)
+      // Adjust size and color based on distance
+      const size = (1 - scale) * SIZE_SCALE + Math.random() * SIZE_RANDOMNESS
+
+      const colorIntensity = scale * (MAX_COLOR_INTENSITY - MIN_COLOR_INTENSITY)
+      //const color = `rgb(${colorIntensity}, ${colorIntensity}, ${colorIntensity})`;
+
+      const color = `hsl(174, 100%, ${Math.round(colorIntensity)}%)`;
+      squares.push(
+        <div
+          key={i}
+          style={{
+            position: "absolute",
+            top: randomY - size / 2,
+            left: randomX - size / 2,
+            width: `${size}px`,
+            height: `${size}px`,
+            backgroundColor: color,
+            border: "solid 8px var(--body-color)"
+          }}
+        ></div>
+      );
+    }
+
+    return squares;
+  };
+
   return (
-    <>
-      <svg
-        width="100%"
-        height="920"
-        viewBox="0 0 1440 920"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="30%"
-          y="16%"
-          width="53%"
-          height="64%"
-          fill="#0D2748"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="47%"
-          y="74%"
-          width="17%"
-          height="15%"
-          fill="#006C7B"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="19%"
-          y="-7%"
-          width="67%"
-          height="33%"
-          fill="#006C7B"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="19%"
-          y="63%"
-          width="31%"
-          height="37%"
-          fill="#005773"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="-2%"
-          y="30%"
-          width="41%"
-          height="57%"
-          fill="#003551"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="17%"
-          y="6%"
-          width="31%"
-          height="33%"
-          fill="#005069"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="77%"
-          y="39%"
-          width="29%"
-          height="52%"
-          fill="#005E73"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="59%"
-          y="55%"
-          width="29%"
-          height="40%"
-          fill="#003D60"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="-3%"
-          y="72%"
-          width="12%"
-          height="19%"
-          fill="#008986"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="69%"
-          y="-14%"
-          width="32%"
-          height="57%"
-          fill="#007E85"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-        <rect
-          x="-3%"
-          y="-7%"
-          width="29%"
-          height="49%"
-          fill="#007B81"
-          stroke="#1E1F20"
-          stroke-width="10"
-        />
-      </svg>
-    </>
+    <div
+      ref={containerRef}
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      {containerSize.width > 0 && containerSize.height > 0
+        ? generateSquares()
+        : null}
+    </div>
   );
-}
+};
+
+export default StartBackground;
+
