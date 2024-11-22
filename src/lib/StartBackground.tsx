@@ -1,82 +1,35 @@
-
-import { randomUUID } from "crypto";
-import React, { useRef, useEffect, useState } from "react";
-
-const StartBackground = () => {
-  // Constants for customization
-  const NUM_SQUARES = 100;
-  const SIZE_SCALE = 500; // Randomness factor for size
-  const SIZE_RANDOMNESS = 200; // Randomness factor for size
-  const MIN_COLOR_INTENSITY = 50; // Lightest color
-  const MAX_COLOR_INTENSITY = 80; // Darkest color
-  const COLOR_RANDOMNESS = 20; // Randomness factor for color
-
-  const containerRef = useRef(null);
-  const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
-
-  // Update container size
-  useEffect(() => {
-    if (containerRef.current) {
-      const { offsetWidth, offsetHeight } = containerRef.current;
-      setContainerSize({ width: offsetWidth, height: offsetHeight });
-    }
-  }, []);
-
-  const generateSquares = () => {
-    const squares = [];
-    const center = { x: containerSize.width / 2, y: containerSize.height / 2 };
-    const max_radius = Math.sqrt(center.x ** 2 + center.y ** 2)
-
-    for (let i = 0; i < NUM_SQUARES; i++) {
-      const angle = Math.random() * 2 * Math.PI;
-      const scale = i / NUM_SQUARES
-      const radius = scale * max_radius;
-
-      const randomX = Math.cos(angle) * radius + center.x;
-      const randomY = Math.sin(angle) * radius + center.y;
-
-      console.log(center, max_radius, angle, radius, randomX, randomY)
-      // Adjust size and color based on distance
-      const size = (1 - scale) * SIZE_SCALE + Math.random() * SIZE_RANDOMNESS
-
-      const colorIntensity = scale * (MAX_COLOR_INTENSITY - MIN_COLOR_INTENSITY)
-      //const color = `rgb(${colorIntensity}, ${colorIntensity}, ${colorIntensity})`;
-
-      const color = `hsl(174, 100%, ${Math.round(colorIntensity)}%)`;
-      squares.push(
-        <div
-          key={i}
-          style={{
-            position: "absolute",
-            top: randomY - size / 2,
-            left: randomX - size / 2,
-            width: `${size}px`,
-            height: `${size}px`,
-            backgroundColor: color,
-            border: "solid 8px var(--body-color)"
-          }}
-        ></div>
-      );
-    }
-
-    return squares;
-  };
-
+const Rect = ({ bgColor, tailwindClasses }) => {
   return (
     <div
-      ref={containerRef}
+      className={`absolute border-body-color border-8 ${tailwindClasses}`}
       style={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
+        backgroundColor: bgColor,
       }}
-    >
-      {containerSize.width > 0 && containerSize.height > 0
-        ? generateSquares()
-        : null}
-    </div>
+    ></div>
   );
 };
 
-export default StartBackground;
+export default function StartBackground() {
+  const rects = [
+    { bgColor: "#0D2748", tailwindClasses: "left-[30%] top-[16%] w-[53%] h-[64%]" },
+    { bgColor: "#006C7B", tailwindClasses: "left-[47%] top-[74%] w-[17%] h-[15%]" },
+    { bgColor: "#006C7B", tailwindClasses: "left-[19%] top-[-7%] w-[67%] h-[33%]" },
+    { bgColor: "#005773", tailwindClasses: "left-[19%] top-[63%] w-[31%] h-[37%]" },
+    { bgColor: "#003551", tailwindClasses: "left-[-2%] top-[30%] w-[41%] h-[57%]" },
+    { bgColor: "#005069", tailwindClasses: "left-[17%] top-[6%] w-[31%] h-[33%]" },
+    { bgColor: "#005E73", tailwindClasses: "left-[77%] top-[39%] w-[29%] h-[52%]" },
+    { bgColor: "#003D60", tailwindClasses: "left-[59%] top-[55%] w-[29%] h-[40%]" },
+    { bgColor: "#008986", tailwindClasses: "left-[-3%] top-[72%] w-[12%] h-[19%]" },
+    { bgColor: "#007E85", tailwindClasses: "left-[69%] top-[-14%] w-[32%] h-[57%]" },
+    { bgColor: "#007B81", tailwindClasses: "left-[-3%] top-[-7%] w-[29%] h-[49%]" },
+  ];
+
+  return (
+    <div className="absolute top-0 left-0 w-full h-[110vh]">
+      {rects.map((rect, index) => (
+        <Rect key={index} {...rect} />
+      ))}
+    </div>
+  );
+}
 
