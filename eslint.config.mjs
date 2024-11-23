@@ -104,7 +104,6 @@ export default tseslint.config(
       "tailwindcss/migration-from-tailwind-2": "error",
       "tailwindcss/no-contradicting-classname": "error",
       "tailwindcss/enforces-negative-arbitrary-values": "error",
-  
 
       "import/first": "error",
       "import/newline-after-import": "error",
@@ -149,3 +148,4 @@ export default tseslint.config(
     },
   },
 );
+

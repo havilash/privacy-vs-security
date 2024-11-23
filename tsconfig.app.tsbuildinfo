@@ -1,1 +1,0 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/lib/startbackground.tsx","./src/sections/guide.tsx","./src/sections/interactivesurvey.tsx","./src/sections/metainfo.tsx","./src/sections/personalguide.tsx","./src/sections/start.tsx","./src/sections/surveyinfo.tsx"],"errors":true,"version":"5.6.3"}

@@ -3,14 +3,16 @@ interface RectProps {
   tailwindClasses: string;
 }
 
-const Rect = ({ bgColor, tailwindClasses }: RectProps) => (
-  <div
-    className={`absolute border-8 border-body-color ${tailwindClasses}`}
-    style={{
-      backgroundColor: bgColor,
-    }}
-  ></div>
-);
+function Rect({ bgColor, tailwindClasses }: RectProps) {
+  return (
+    <div
+      className={`border-body-color absolute border-8 ${tailwindClasses}`}
+      style={{
+        backgroundColor: bgColor,
+      }}
+    ></div>
+  );
+}
 
 export default function StartBackground() {
   const rects = [

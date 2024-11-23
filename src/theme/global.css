@@ -23,4 +23,5 @@
   body {
     @apply bg-body-color font-roboto text-base text-text-color;
   }
+
 }
