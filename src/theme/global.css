@@ -24,4 +24,20 @@
     @apply bg-body-color font-roboto text-base text-text-color;
   }
 
+  h1 {
+    @apply text-4xl text-primary-color font-roboto font-extrabold;
+  }
+  h2 {
+    @apply text-2xl text-secondary-color font-roboto font-thin;
+  }
+  h3 {
+    @apply text-xl text-secondary-color font-roboto font-thin;
+  }
+  h4 {
+    @apply text-lg text-secondary-color font-roboto font-thin;
+  }
+
+  p {
+    @apply text-base font-medium text-text-color;
+  } 
 }
