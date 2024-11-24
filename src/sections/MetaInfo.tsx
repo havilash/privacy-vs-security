@@ -21,7 +21,7 @@ function Info({ IconElement, value, title }: InfoProps) {
 
 export default function MetaInfo() {
   return (
-    <section className="mt-16 flex flex-row flex-wrap items-center justify-center gap-24">
+    <section className="mt-16 flex flex-row flex-wrap items-center justify-evenly gap-24">
       <Info
         IconElement={<FaPeopleGroup color="var(--primary-color)" />}
         value="70+"
