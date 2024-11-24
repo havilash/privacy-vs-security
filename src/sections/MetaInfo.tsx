@@ -12,7 +12,7 @@ interface InfoProps {
 function Info({ IconElement, value, title }: InfoProps) {
   return (
     <div className="fit- flex flex-col items-center justify-center gap-4">
-      <icon className="text-9xl">{IconElement}</icon>
+      <i className="text-9xl">{IconElement}</i>
       <h1 className="text-text-color">{value}</h1>
       <h2 className="text-text-color">{title}</h2>
     </div>
