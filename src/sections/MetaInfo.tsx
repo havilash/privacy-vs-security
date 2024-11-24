@@ -25,7 +25,7 @@ export default function MetaInfo() {
       <Info
         IconElement={<FaPeopleGroup color="var(--primary-color)" />}
         value="70+"
-        title="Befrage"
+        title="Befragte"
       />
       <Info
         IconElement={<FaGlobeAmericas color="var(--primary-color)" />}
