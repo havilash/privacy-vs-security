@@ -6,7 +6,7 @@ interface RectProps {
 function Rect({ bgColor, tailwindClasses }: RectProps) {
   return (
     <div
-      className={`border-body-color absolute border-8 ${tailwindClasses}`}
+      className={`absolute border-8 border-body-color ${tailwindClasses}`}
       style={{
         backgroundColor: bgColor,
       }}
