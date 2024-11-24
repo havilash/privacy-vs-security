@@ -13,15 +13,15 @@ function Info({ IconElement, value, title }: InfoProps) {
   return (
     <div className="fit- flex flex-col items-center justify-center gap-4">
       <icon className="text-9xl">{IconElement}</icon>
-      <h1 className="text-4xl font-bold">{value}</h1>
-      <h2 className="text-xl font-thin">{title}</h2>
+      <h1 className="text-text-color">{value}</h1>
+      <h2 className="text-text-color">{title}</h2>
     </div>
   );
 }
 
 export default function MetaInfo() {
   return (
-    <section className="mt-16 flex flex-col justify-between gap-8 md:flex-row">
+    <section className="mt-16 flex flex-row flex-wrap items-center justify-center gap-24">
       <Info
         IconElement={<FaPeopleGroup color="var(--primary-color)" />}
         value="70+"

@@ -2,7 +2,7 @@ interface Props {}
 
 export default function Guide({}: Props) {
   return (
-    <section className="flex flex-col justify-between gap-16 md:flex-row">
+    <section className="flex flex-col justify-between gap-16 md:flex-row xl:gap-y-32">
       <div className="flex flex-col gap-4">
         <h2>Sicherheit</h2>
         <p>
