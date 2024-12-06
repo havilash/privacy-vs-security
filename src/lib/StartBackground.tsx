@@ -63,7 +63,7 @@ export default function StartBackground() {
   ];
 
   return (
-    <div className="absolute left-0 top-0 h-[110vh] w-full">
+    <div className="absolute left-0 top-0 h-[110vh] w-full overflow-x-hidden">
       {rects.map((rect, index) => (
         <Rect key={index} {...rect} />
       ))}
