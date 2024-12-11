@@ -35,7 +35,7 @@ export default function SurveyQuestion({ text, initialValue, onChange }: Props) 
       <p className="w-full text-lg text-center md:w-1/3 md:text-left">{text}</p>
 
       {/* Slider Section */}
-      <div className="w-full md:w-2/3">
+      <div className="w-full md:w-2/3 sm:w-1/2 ">
         <RangeSlider
           className="single-thumb"
           value={singleThumbValue}
