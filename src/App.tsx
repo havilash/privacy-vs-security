@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { NEUTRAL_VALUE, QUESTIONS } from "./consts";
 import Guide from "./sections/Guide";
 import InteractiveSurvey from "./sections/InteractiveSurvey";
@@ -5,10 +7,11 @@ import MetaInfo from "./sections/MetaInfo";
 import PersonalGuide from "./sections/PersonalGuide";
 import Start from "./sections/Start";
 import SurveyInfo from "./sections/SurveyInfo";
-import React, { useState } from 'react';
 
 export default function App() {
-  const [responses, setResponses] = useState<number[]>(new Array(QUESTIONS.length).fill(NEUTRAL_VALUE));
+  const [responses, setResponses] = useState<number[]>(
+    new Array(QUESTIONS.length).fill(NEUTRAL_VALUE),
+  );
 
   return (
     <>
@@ -18,8 +21,12 @@ export default function App() {
           <MetaInfo />
           <Guide />
           <SurveyInfo />
-          <InteractiveSurvey questions={QUESTIONS} responses={responses} setResponses={setResponses} />
-          <PersonalGuide responses={responses}/>
+          <InteractiveSurvey
+            questions={QUESTIONS}
+            responses={responses}
+            setResponses={setResponses}
+          />
+          <PersonalGuide responses={responses} />
         </div>
       </main>
     </>
