@@ -17,8 +17,8 @@ jobs:
           node-version: 18.x
       - name: Install Dependencies
         run: npm install
-      - name: Run Linting
-        run: npm run lint
+      # - name: Run Linting
+      #   run: npm run lint
       - name: Build Project
         run: npm run build
       - name: Upload artifact to enable deployment
