@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 import "./SurveyQuestion.css";
+import { CUSTOM_LABELS } from "@/consts";
 
 /* eslint-disable no-unused-vars */
 interface Props {
@@ -11,12 +12,6 @@ interface Props {
 }
 /* eslint-enable no-unused-vars */
 
-const CUSTOM_LABELS = [
-  "stimmt üperhaupt nicht zu",
-  "stimme nicht zu",
-  "stimme zu",
-  "stimme voll zu",
-];
 
 export default function SurveyQuestion({
   text,

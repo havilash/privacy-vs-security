@@ -1,18 +1,17 @@
-import { useState } from "react";
-
 import SurveyQuestion from "@/components/SurveyQuestion/SurveyQuestion";
+import React from "react";
 
-export default function InteractiveSurvey() {
-  const questions = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec semper justo, ac laoreet arcu?",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec semper justo, ac laoreet arcu?",
-  ];
+interface InteractiveSurveyProps {
+  questions: string[];
+  responses: number[];
+  setResponses: React.Dispatch<React.SetStateAction<number[]>>;
+}
 
-  const neutralValue = 2;
-  const [responses, setResponses] = useState<number[]>(
-    Array(questions.length).fill(neutralValue),
-  );
-
+export default function InteractiveSurvey({
+  questions,
+  responses,
+  setResponses,
+}: InteractiveSurveyProps) {
   const handleSliderChange = (index: number, value: number) => {
     setResponses((prev) => {
       const updated = [...prev];
