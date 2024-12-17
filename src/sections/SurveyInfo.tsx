@@ -4,9 +4,9 @@ interface Props {}
 
 export default function SurveyInfo({}: Props) {
   return (
-    <section className="flex flex-col gap-16">
+    <section className="flex flex-col gap-16 w-full">
       <div className="flex w-full flex-col items-center justify-between gap-16 xl:flex-row">
-        <p className="w-full">
+        <p className="w-full xl:w-1/2">
           laboris culpa consectetur adipisicing mollit nulla ea. laborum laborum
           officia quis pariatur. nisi elit minim labore esse do ullamco sint
           amet incididunt est cillum pariatur. magna lorem excepteur enim
@@ -21,13 +21,13 @@ export default function SurveyInfo({}: Props) {
           deserunt duis et cupidatat consequat irure anim pariatur commodo.
         </p>
         <img
-          className="w-full"
+          className="w-full xl:w-1/2"
           src={privacyVsSecurityImage}
           alt="Privacy vs Security"
         />
       </div>
       <div className="flex w-full flex-col items-center justify-between gap-16 xl:flex-row">
-        <p className="w-full">
+        <p className="w-full xl:w-1/2">
           laboris culpa consectetur adipisicing mollit nulla ea. laborum laborum
           officia quis pariatur. nisi elit minim labore esse do ullamco sint
           amet incididunt est cillum pariatur. magna lorem excepteur enim
@@ -42,7 +42,7 @@ export default function SurveyInfo({}: Props) {
           deserunt duis et cupidatat consequat irure anim pariatur commodo.
         </p>
         <img
-          className="w-full"
+          className="w-full xl:w-1/2"
           src={privacyVsSecurityImage}
           alt="Privacy vs Security"
         />
