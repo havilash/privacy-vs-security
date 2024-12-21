@@ -32,9 +32,9 @@ export default function SurveyQuestion({
     onChange(value[1]);
   };
   return (
-    <div className="flex flex-col items-center gap-4 md:flex-row">
-      <p className="w-full text-center text-lg md:w-1/3 md:text-left">{text}</p>
-      <div className="w-full  sm:w-1/2 md:w-2/3">
+    <div className="flex flex-col items-center text-center gap-4 md:flex-row md:text-left md:items-start">
+      <p className="w-full md:w-1/3">{text}</p>
+      <div className="w-full md:w-2/3">
         <RangeSlider
           className="single-thumb"
           value={singleThumbValue}

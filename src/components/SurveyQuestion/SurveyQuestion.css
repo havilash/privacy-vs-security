@@ -20,6 +20,15 @@ body {
   margin: 42px auto 0;
 }
 
+
+/* Additional CSS */
+@media (max-width: 768px) {
+  .single-thumb {
+    margin: 0 auto; 
+    width: 70%;
+  }
+}
+
 /* Yellow Range Slider */
 #range-slider-yellow {
   background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23555' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")
@@ -165,3 +174,4 @@ body {
 .vertical-slider[data-vertical] {
   height: 180px;
 }
+
