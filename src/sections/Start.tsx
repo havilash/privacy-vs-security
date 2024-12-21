@@ -1,4 +1,4 @@
-import StartBackground from "@/lib/StartBackground";
+import StartBackground from "@/components/StartBackground";
 
 export default function Start() {
   return (
