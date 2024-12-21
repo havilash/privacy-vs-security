@@ -34,7 +34,7 @@ export default function MetaInfo() {
       />
       <Info
         IconElement={<MdAccessTime color="var(--primary-color)" />}
-        value="12-96"
+        value="12 - 96"
         title="Alter"
       />
     </section>

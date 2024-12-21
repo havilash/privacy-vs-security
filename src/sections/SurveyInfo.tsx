@@ -1,3 +1,4 @@
+import privacyVsSecurityBoxplotImage from "@/assets/privacy-vs-security-boxplot.png";
 import privacyVsSecurityImage from "@/assets/privacy-vs-security.png";
 
 interface Props {}
@@ -52,7 +53,7 @@ export default function SurveyInfo({}: Props) {
         </p>
         <img
           className="w-full xl:w-1/2"
-          src={privacyVsSecurityImage}
+          src={privacyVsSecurityBoxplotImage}
           alt="Privacy vs Security"
         />
       </div>
