@@ -30,12 +30,12 @@ export default function MetaInfo() {
       <Info
         IconElement={<FaGlobeAmericas color="var(--primary-color)" />}
         value="11"
-        title="Lorem"
+        title="Herkünfte"
       />
       <Info
         IconElement={<MdAccessTime color="var(--primary-color)" />}
-        value="4"
-        title="Ipsum"
+        value="12-96"
+        title="Alter"
       />
     </section>
   );
