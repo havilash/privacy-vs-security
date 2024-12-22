@@ -10,42 +10,62 @@ const SliderBar: React.FC<SliderBarProps> = ({ responses }) => {
   const responsesTotal = responses.reduce((a, b) => a + b, 0);
 
   // Calculate the percentage
-  const percent = (responsesTotal / (responses.length * (CUSTOM_LABELS.length - 1)));
+  const percent =
+    responsesTotal / (responses.length * (CUSTOM_LABELS.length - 1));
 
-  // Determine which "third" the percentage falls into
-  let third: 1 | 2 | 3 = 1;  // Explicit type for third: it can only be 1, 2, or 3
+  // Determine which "quarter" the percentage falls into
+  let quarter: 1 | 2 | 3 | 4 = 1; // Explicit type for third: it can only be 1, 2, or 3
 
-  if (percent < 1/3) {
-    third = 1;
-  } else if (percent >= 1/3 && percent < 2/3) {
-    third = 2;
-  } else if (percent >= 2/3) {
-    third = 3;
+  if (percent < 1 / 4) {
+    quarter = 1;
+  } else if (percent >= 1 / 4 && percent < 2 / 4) {
+    quarter = 2;
+  } else if (percent >= 2 / 4 && percent < 3 / 4) {
+    quarter = 3;
+  } else if (percent >= 3 / 4) {
+    quarter = 4;
   }
 
-  const responseThirdHeader: { [key in 1 | 2 | 3]: string } = {
-    1: "GAY 1",
-    2: "GAY 2",
-    3: "GAY 3",
+  const responseQuarterHeader: { [key in 1 | 2 | 3 | 4]: string } = {
+    1: "Du legst grossen Wert auf Privatsphäre",
+    2: "Du legst Wert auf Privatsphäre",
+    3: "Du legst Wert auf Sicherheit",
+    4: "Du legst grossen Wert auf Sicherheit",
   };
 
-    const responseThirdBody: { [key in 1 | 2 | 3]: string } = {
-    1: "1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum. quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
-    2: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum. quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
-    3: "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum. quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
-  };
-
-  const header = responseThirdHeader[third];
-  const body = responseThirdBody[third]
+  const header = responseQuarterHeader[quarter];
 
   return (
-    <div className="w-full h-6 rounded-lg">
-      <h2 className="py-4">
-        {header} 
-      </h2>
-      <p >
-        {body}
+    <div className="w-full h-6 rounded-lg" >
+      <h2 className="py-4">{header}</h2>
+      <div className="space-y-3">
+      <p>
+        Zu Beginn fragten wir uns, unter welchen Bedingungen der Staat auf die
+        Daten einer Chat-App zugreifen darf und wie weit Nutzer:innen bereit
+        sind, ihre Privatsphäre zugunsten der Sicherheit zu opfern. Wir
+        dokumentierten die Definitionen von Privatsphäre und Sicherheit,
+        analysierten relevante Gesetze in der Schweiz und der EU und führten
+        eine Umfrage durch.
       </p>
+      <p>
+        Unsere Hypothese war, dass Sicherheit den Menschen wichtiger sei als
+        Privatsphäre, da viele ohnehin schon persönliche Daten preisgeben. Doch
+        die Umfrage zeigte das Gegenteil: Die Mehrheit bevorzugt Privatsphäre –
+        unabhängig von Geschlecht, Alter oder Beruf.
+      </p>
+      <p>
+        Ein Hauptgrund ist das starke Unbehagen, das durch zu viel Exposition
+        entsteht. Ausserdem sind viele sich nicht bewusst, wie viele Daten
+        bereits genutzt werden, was wir am Beispiel von WhatsApp analysierten.
+        Die Unwissenheit könnte dazu führen, dass sie unabsichtlich mehr Daten
+        preisgeben würden, als sie eigentlich möchten.
+      </p>
+      <p>
+        Abschliessend war unsere Hypothese falsch, weil wir unterschätzt haben,
+        wie wichtig den Menschen ihre Privatsphäre ist und wie viel sie darüber
+        wissen.
+      </p>
+      </div>
     </div>
   );
 };
