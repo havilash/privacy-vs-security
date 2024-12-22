@@ -7,10 +7,13 @@ interface PersonalGuideProps {
 
 export default function PersonalGuide({ responses }: PersonalGuideProps) {
   return (
-    <section className="pb-64">
-      <h1 className="mb-4 flex flex-col items-center">Personal Guide</h1>
-      <h2 className="mb-4 flex flex-col items-center">
-        SUBTITLE JUST FOR FUN CUZ WE COOL LIKE THAT
+    <section className="pb-96">
+      <h1 className="mb-4 flex flex-col items-center text-center">
+        Persönlicher Leitfaden
+      </h1>
+      <h2 className="mb-4 flex flex-col items-center text-center">
+        Mit den Fragen, die Sie oben beantwortet haben, haben wir eine kleine
+        Auswertung Ihrer Datenschutz-/Sicherheitsanforderungen zusammengestellt.
       </h2>
       <div className="flex justify-between py-2">
         <h2>Privacy</h2>
