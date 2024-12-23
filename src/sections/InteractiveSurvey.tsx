@@ -23,8 +23,8 @@ export default function InteractiveSurvey({
   return (
     <section className="flex flex-col items-center px-4  py-10">
       <div className="mb-6 text-center">
-        <h1>Now you!</h1>
-        <h2 className="mt-1">Dark or Light? Security or Privacy?</h2>
+        <h1>Jetzt du</h1>
+        <h2 className="mt-1">Dunkelheit oder Licht? Sicherheit oder Privatsphäre?</h2>
       </div>
       
         <div className="w-full space-y-6">
@@ -37,12 +37,7 @@ export default function InteractiveSurvey({
             />
           ))}
         </div>
-    
-
-      <div className="mt-6 text-center">
-        <h3 className="text-lg font-semibold">Responses:</h3>
-        <p>{JSON.stringify(responses)}</p>
-      </div>
+  
     </section>
   );
 }

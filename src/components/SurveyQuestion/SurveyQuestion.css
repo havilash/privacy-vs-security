@@ -120,7 +120,7 @@ body {
 }
 
 #range-slider-gradient .range-slider__thumb[data-lower] {
-  background: #0073e6;
+  background: #00B9A6;
 }
 
 #range-slider-gradient .range-slider__thumb[data-upper] {
@@ -128,7 +128,7 @@ body {
 }
 
 #range-slider-gradient .range-slider__range {
-  background: linear-gradient(to right, #0073e6, #ee2c2c);
+  background: linear-gradient(to right, #00B9A6, #ee2c2c);
   background-size: 200% 100%;
   background-position: 50% 0;
 }
