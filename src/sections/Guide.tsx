@@ -3,7 +3,7 @@ interface Props {}
 export default function Guide({}: Props) {
   return (
     <section className="flex flex-col justify-between gap-16 md:flex-row xl:gap-y-32">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 w-1/2">
         <h2>Sicherheit</h2>
         <p>
         Das Gefühl der Sicherheit ist ein Grundbedürfnis für uns Menschen. Der Staat hat die Verpflichtung, die Sicherheit seiner Bürgerinnen 
@@ -18,7 +18,7 @@ export default function Guide({}: Props) {
           kommunizieren, was sie mit den Daten machen. Der Staat darf nämlich nicht das Grundbedürfnis der Privatsphäre verletzen, um das Grundbedürfnis der Sicherheit zu gewährleisten.
         </p>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 w-1/2">
         <h2>Privatsphäre</h2>
         <p>
         Die Privatsphäre ist wie die Sicherheit ein Grundbedürfnis des Menschen. In der Bundesverfassung wird genau geschrieben, dass jede Person Anspruch auf Achtung 
