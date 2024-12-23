@@ -8,19 +8,21 @@ export default function SurveyInfo({}: Props) {
     <section className="flex w-full flex-col gap-16">
       <div className="flex w-full flex-col items-center justify-between gap-16 xl:flex-row">
         <p className="w-full xl:w-1/2">
-          Das Säulendiagramm zeigt die Ergebnisse einer Umfrage zum Thema
-          Sicherheit und Privatsphäre. Die X-Achse stellt die Teilnehmer dar,
-          während die Y-Achse den Anteil der Personen zeigt, die mehr
-          Privatsphäre (orange) oder mehr Sicherheit (blau) bevorzugen. Die
-          Skala reicht von 0 % bis 100 %, was verdeutlicht, wie stark die
-          Befragten jeweils eine dieser beiden Bedürfnisse favorisieren.
+          Das Diagramm zeigt, in welchem Masse einzelne Personen entweder
+          Sicherheit oder Privatsphäre bevorzugen. Jeder Balken repräsentiert
+          eine Person, und die Höhe der blauen und orangefarbenen Anteile zeigt,
+          wie stark diese Person zu einem der beiden Bedürfnisse neigt.
           <br />
           <br />
-          Aus den Antworten auf eine Reihe von Fragen konnten wir ablesen, ob
-          jemand mehr zur Sicherheit oder zur Privatsphäre tendiert. Das
-          Diagramm zeigt, dass die Mehrheit (60 %) eine klare Präferenz für
-          Privatsphäre hat, während 40 % eher Sicherheit bevorzugen. Dies
-          bestätigt, dass Privatsphäre für viele wichtiger ist als Sicherheit.
+          Die Mehrheit der Befragten tendiert stärker zur Privatsphäre, was
+          darauf hinweist, dass vielen der Schutz ihrer persönlichen Daten und
+          ihre Selbstbestimmung wichtiger sind als Sicherheitsmassnahmen.
+          Privatsphäre bedeutet, dass man selbst kontrolliert, welche
+          Informationen über einen bekannt werden. Sicherheit hingegen zielt
+          darauf ab, Gefahren wie Kriminalität und Missbrauch vorzubeugen. Die
+          Ergebnisse machen deutlich, dass viele bereit sind, mögliche
+          Sicherheitsrisiken in Kauf zu nehmen, um ihre persönliche Freiheit zu
+          bewahren.
         </p>
         <img
           className="w-full xl:w-1/2"
@@ -30,18 +32,18 @@ export default function SurveyInfo({}: Props) {
       </div>
       <div className="flex w-full flex-col items-center justify-between gap-16 xl:flex-row">
         <p className="w-full xl:w-1/2">
-          Der Boxplot zeigt, wie die Teilnehmer Sicherheit (blau) und
-          Privatsphäre (orange) auf einer Skala von 0 bis 6 bewerten, wobei 0
-          für „Stimme überhaupt nicht zu“ und 6 für „Stimme voll zu“ steht. Die
-          vertikale Achse zeigt die Bewertungen, während die horizontale keine
-          besondere Bedeutung hat.
+          Das Diagramm zeigt, wie stark die Befragten Sicherheit und
+          Privatsphäre auf einer Skala von 0 bis 6 bewerten. Dabei steht 0 für
+          "stimme überhaupt nicht zu" und 6 für "stimme voll zu".
           <br />
           <br />
-          Insgesamt zeigt sich, dass das Sicherheitsbedürfnis meist geringer
-          ausgeprägt ist als das Bedürfnis nach Privatsphäre. Es gibt jedoch
-          mehr Unterschiede bei den Sicherheitsbewertungen, während bei der
-          Privatsphäre die Meinungen der meisten Teilnehmer näher beieinander n
-          liegen.
+          Die Ergebnisse machen deutlich, dass das Bedürfnis nach Privatsphäre
+          insgesamt höher bewertet wird als das nach Sicherheit. Während die
+          Bewertungen zur Sicherheit stärker variieren, sind die Meinungen zur
+          Privatsphäre unter den Befragten konsistenter. Dies zeigt wiedermals,
+          dass vielen Menschen der Schutz ihrer persönlichen Daten besonders
+          wichtig ist, auch wenn die Ansichten zur Sicherheit individuell stark
+          unterschiedlich sind.
         </p>
         <img
           className="w-full xl:w-1/2"
