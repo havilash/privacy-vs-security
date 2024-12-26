@@ -4,10 +4,12 @@
 /** css variables **/
 :root {
   /** colors **/
-  --primary-color: #00B9A6;
-  --secondary-color: #80B5D5;
+  --primary-color: #00b9a6;
+  --secondary-color: #80b5d5;
+  --tertiary-color: #007b81;
 
-  --text-color: #D9D9D9;
+  --text-color: #d9d9d9;
 
-  --body-color: #1E1F20;
+  --body-color: #1e1f20;
 }
+

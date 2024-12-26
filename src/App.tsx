@@ -17,7 +17,7 @@ export default function App() {
     <>
       <main className="flex size-full flex-col items-center gap-32">
         <Start />
-        <div className="flex w-[clamp(75%,40rem,100%)] flex-col gap-32 px-8">
+        <div className="flex w-[clamp(75%,40rem,100%)] flex-col gap-32 px-8 pb-24">
           <MetaInfo />
           <Guide />
           <SurveyInfo />

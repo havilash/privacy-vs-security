@@ -26,7 +26,7 @@ const SliderBar: React.FC<SliderBarProps> = ({ responses }) => {
       {/* For large screens: Privacy and Security positioned on the left and right respectively */}
       {/* Slider bar */}
       <div
-        className="h-full bg-[#007b81] transition-all duration-500 ease-in-out"
+        className="bg-tertiary-color h-full transition-all duration-500 ease-in-out"
         style={{ width: `${currentWidth}%` }} // eslint-disable-line @typescript-eslint/restrict-template-expressions
       ></div>
     </div>
