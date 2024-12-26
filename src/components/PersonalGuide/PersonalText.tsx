@@ -37,7 +37,7 @@ const SliderBar: React.FC<SliderBarProps> = ({ responses }) => {
   const header = responseQuarterHeader[quarter];
 
   return (
-    <div className="h-6 w-full rounded-lg">
+    <div className="h-6 w-full rounded-lg pt-4">
       <h2 className="py-4">{header}</h2>
       <div className="space-y-3">
         <p>
