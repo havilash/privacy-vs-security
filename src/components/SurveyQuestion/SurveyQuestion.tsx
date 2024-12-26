@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import RangeSlider from "react-range-slider-input";
+
 import "react-range-slider-input/dist/style.css";
 import "./SurveyQuestion.css";
 import { CUSTOM_LABELS } from "@/consts";
@@ -11,7 +12,6 @@ interface Props {
   onChange: (value: number) => void; // Notify parent of changes
 }
 /* eslint-enable no-unused-vars */
-
 
 export default function SurveyQuestion({
   text,
@@ -32,7 +32,7 @@ export default function SurveyQuestion({
     onChange(value[1]);
   };
   return (
-    <div className="flex flex-col items-center text-center gap-4 space-x-10 lg:flex-row lg:text-left lg:items-start">
+    <div className="flex flex-col items-center gap-4 space-x-10 text-center lg:flex-row lg:items-start lg:text-left">
       <p className="w-full lg:w-2/5">{text}</p>
       <div className="w-full lg:w-3/5">
         <RangeSlider

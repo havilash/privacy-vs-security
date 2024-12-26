@@ -1,9 +1,10 @@
 import React from "react";
+
 import { CUSTOM_LABELS } from "@/consts";
 
-type SliderBarProps = {
+interface SliderBarProps {
   responses: number[];
-};
+}
 
 const SliderBar: React.FC<SliderBarProps> = ({ responses }) => {
   // Calculate the total of all responses
@@ -26,7 +27,7 @@ const SliderBar: React.FC<SliderBarProps> = ({ responses }) => {
     quarter = 4;
   }
 
-  const responseQuarterHeader: { [key in 1 | 2 | 3 | 4]: string } = {
+  const responseQuarterHeader: Record<1 | 2 | 3 | 4, string> = {
     1: "Du legst grossen Wert auf Privatsphäre",
     2: "Du legst Wert auf Privatsphäre",
     3: "Du legst Wert auf Sicherheit",
@@ -36,35 +37,35 @@ const SliderBar: React.FC<SliderBarProps> = ({ responses }) => {
   const header = responseQuarterHeader[quarter];
 
   return (
-    <div className="w-full h-6 rounded-lg" >
+    <div className="h-6 w-full rounded-lg">
       <h2 className="py-4">{header}</h2>
       <div className="space-y-3">
-      <p>
-        Zu Beginn fragten wir uns, unter welchen Bedingungen der Staat auf die
-        Daten einer Chat-App zugreifen darf und wie weit Nutzer:innen bereit
-        sind, ihre Privatsphäre zugunsten der Sicherheit zu opfern. Wir
-        dokumentierten die Definitionen von Privatsphäre und Sicherheit,
-        analysierten relevante Gesetze in der Schweiz und der EU und führten
-        eine Umfrage durch.
-      </p>
-      <p>
-        Unsere Hypothese war, dass Sicherheit den Menschen wichtiger sei als
-        Privatsphäre, da viele ohnehin schon persönliche Daten preisgeben. Doch
-        die Umfrage zeigte das Gegenteil: Die Mehrheit bevorzugt Privatsphäre –
-        unabhängig von Geschlecht, Alter oder Beruf.
-      </p>
-      <p>
-        Ein Hauptgrund ist das starke Unbehagen, das durch zu viel Exposition
-        entsteht. Ausserdem sind viele sich nicht bewusst, wie viele Daten
-        bereits genutzt werden, was wir am Beispiel von WhatsApp analysierten.
-        Die Unwissenheit könnte dazu führen, dass sie unabsichtlich mehr Daten
-        preisgeben würden, als sie eigentlich möchten.
-      </p>
-      <p>
-        Abschliessend war unsere Hypothese falsch, weil wir unterschätzt haben,
-        wie wichtig den Menschen ihre Privatsphäre ist und wie viel sie darüber
-        wissen.
-      </p>
+        <p>
+          Zu Beginn fragten wir uns, unter welchen Bedingungen der Staat auf die
+          Daten einer Chat-App zugreifen darf und wie weit Nutzer:innen bereit
+          sind, ihre Privatsphäre zugunsten der Sicherheit zu opfern. Wir
+          dokumentierten die Definitionen von Privatsphäre und Sicherheit,
+          analysierten relevante Gesetze in der Schweiz und der EU und führten
+          eine Umfrage durch.
+        </p>
+        <p>
+          Unsere Hypothese war, dass Sicherheit den Menschen wichtiger sei als
+          Privatsphäre, da viele ohnehin schon persönliche Daten preisgeben.
+          Doch die Umfrage zeigte das Gegenteil: Die Mehrheit bevorzugt
+          Privatsphäre – unabhängig von Geschlecht, Alter oder Beruf.
+        </p>
+        <p>
+          Ein Hauptgrund ist das starke Unbehagen, das durch zu viel Exposition
+          entsteht. Ausserdem sind viele sich nicht bewusst, wie viele Daten
+          bereits genutzt werden, was wir am Beispiel von WhatsApp analysierten.
+          Die Unwissenheit könnte dazu führen, dass sie unabsichtlich mehr Daten
+          preisgeben würden, als sie eigentlich möchten.
+        </p>
+        <p>
+          Abschliessend war unsere Hypothese falsch, weil wir unterschätzt
+          haben, wie wichtig den Menschen ihre Privatsphäre ist und wie viel sie
+          darüber wissen.
+        </p>
       </div>
     </div>
   );
