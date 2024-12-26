@@ -1,5 +1,5 @@
-import SliderBar from "@/components/PeresonalGuide/PersonalGuideSlider";
-import PersonalText from "@/components/PeresonalGuide/PersonalText";
+import SliderBar from "@/components/PersonalGuide/PersonalGuideSlider";
+import PersonalText from "@/components/PersonalGuide/PersonalText";
 
 interface PersonalGuideProps {
   responses: number[];
