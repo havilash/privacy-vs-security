@@ -1,4 +1,4 @@
-import SliderBar from "@/components/PeresonalGuide/PersonalGuidSlider";
+import SliderBar from "@/components/PeresonalGuide/PersonalGuideSlider";
 import PersonalText from "@/components/PeresonalGuide/PersonalText";
 
 interface PersonalGuideProps {
