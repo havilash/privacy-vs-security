@@ -7,7 +7,7 @@ interface PersonalGuideProps {
 
 export default function PersonalGuide({ responses }: PersonalGuideProps) {
   return (
-    <section className="pb-96">
+    <section>
       <h1 className="mb-4 flex flex-col items-center text-center">
         Persönlicher Leitfaden
       </h1>

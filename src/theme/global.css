@@ -26,20 +26,19 @@
   }
 
   h1 {
-    @apply text-4xl text-primary-color font-roboto font-extrabold;
+    @apply text-4xl text-primary-color font-roboto font-bold;
   }
   h2 {
-    @apply text-2xl text-secondary-color font-roboto font-thin;
+    @apply text-2xl text-secondary-color font-roboto font-normal;
   }
   h3 {
-    @apply text-xl text-secondary-color font-roboto font-thin;
+    @apply text-xl text-secondary-color font-roboto font-normal;
   }
   h4 {
-    @apply text-lg text-secondary-color font-roboto font-thin;
+    @apply text-lg text-secondary-color font-roboto font-normal;
   }
 
   p {
-    @apply text-base md:text-lg font-medium text-text-color text-justify;
+    @apply text-lg font-medium text-text-color text-justify;
   }
 }
-
