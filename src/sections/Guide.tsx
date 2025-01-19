@@ -7,26 +7,22 @@ export default function Guide({}: Props) {
         <h2>Sicherheit</h2>
         <p>
           Das Gefühl der Sicherheit ist ein Grundbedürfnis für uns Menschen. Der
-          Staat hat die Verpflichtung, die Sicherheit seiner Bürgerinnen und
-          Bürger zu gewährleisten. Bei den Chat-Apps ist jetzt die Frage, wie
-          viel Macht und Zugriff der Staat auf diese Apps haben soll. Obwohl bei
-          Chat-Apps Menschen miteinander indirekt und manchmal auch anonym
-          kommunizieren, gibt es viele Vorfälle von Cybermobbing, sexueller
-          Belästigung, Handel mit illegalen Gütern (Drogen, Waffen) bis zu
-          Menschenhandel und Pädophilie. Bei Chat-Apps ist einfach das Problem,
-          dass es keine wirklichen Regeln gibt und die Polizei oder der Staat
-          haben nicht das Recht, bei manchen Vorfällen einzugreifen, oder sie
-          können nur eingreifen, wenn es schon zu spät ist.
+          Staat ist dafür verantwortlich, die Sicherheit seiner Bürgerinnen und
+          Bürger zu gewährleisten. Bei Chat-Apps stellt sich die Frage, wie viel
+          Zugriff der Staat darauf haben sollte. Obwohl Menschen hier indirekt
+          und oft anonym kommunizieren, gibt es Fälle von Cybermobbing,
+          sexueller Belästigung, Handel mit illegalen Gütern und sogar
+          Menschenhandel. Das Problem ist, dass es in Chat-Apps kaum Regeln gibt
+          und der Staat oft nur eingreifen kann, wenn es bereits zu spät ist.{" "}
           <br />
           <br />
-          Man ist Pro-Sicherheit, wenn man will, dass der Staat mehr Recht auf
-          die Nachrichten und Daten der Chat-Apps hat. So können sie verdächtige
-          Chats analysieren und früh genug handeln. Obwohl dies so klingt wie
-          die NSA bevor Snowden, muss der Staat mit den Usern mithilfe
-          Nutzungsbedingungen, Vereinbarungen und Nachrichten klar
-          kommunizieren, was sie mit den Daten machen. Der Staat darf nämlich
-          nicht das Grundbedürfnis der Privatsphäre verletzen, um das
-          Grundbedürfnis der Sicherheit zu gewährleisten.
+          Man ist Pro-Sicherheit, wenn man den Staat ermächtigen möchte, auf
+          Nachrichten und Daten von Chat-Apps zuzugreifen. So könnten
+          verdächtige Chats analysiert und Straftaten rechtzeitig verhindert
+          werden. Trotz dieser Massahmen muss der Staat sicherstellen, dass die
+          Privatsphäre der Nutzer gewahrt bleibt, indem transparent erklärt
+          wird, wie mit den Daten umgegangen wird. Die Balance zwischen
+          Sicherheit und Privatsphäre ist dabei entscheidend.{" "}
         </p>
       </div>
       <div className="flex w-full flex-col gap-4 xl:w-1/2">
