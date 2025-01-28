@@ -1,5 +1,5 @@
 export const CUSTOM_LABELS = [
-  "stimmt üperhaupt nicht zu",
+  "stimme üperhaupt nicht zu",
   "stimme nicht zu",
   "stimme zu",
   "stimme voll zu",
